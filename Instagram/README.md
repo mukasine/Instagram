@@ -43,10 +43,7 @@ python manage.py makemigrations instagram
 python3.6 manage.py sqlmigrate instagram 0001
 python3.6 manage.py migrate
 
-## Run the app
 
-python3.6 manage.py runserver
-copy: http://127.0.0.1:8000/ past to the browser
 
 ## Known bugs
 
