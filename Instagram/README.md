@@ -26,7 +26,7 @@ Activate virtual environment using python3.6 as default handler
 ## Create the Database
 * psql
 * CREATE DATABASE insto;
-## env file
+## .env file
 Create .env file and paste the following:
 
 SECRET_KEY = '<Secret_key>'
