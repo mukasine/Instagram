@@ -71,20 +71,6 @@ def image(request,image_id):
     return render(request,"all-instagone/image.html", {"image":image})
 
 @login_required(login_url='/accounts/login/')
-def new_image(request):
-    current_user = request.user
-    title = 'New image'
-    if request.method == 'POST':
-        form = NewImageForm(request.POST, request.FILES)
-        if form.is_valid():
-            image = form.save(commit=False)
-            image.user = current_user
-            image.save()
-        return redirect('InstagoneToday')
-
-    else:
-        form = NewImageForm()
-    return render(request, 'new_image.html', {"form": form,"current_user":current_user,"title":title})
 
 @login_required(login_url='/accounts/login/')
 def upload_profile(request):
