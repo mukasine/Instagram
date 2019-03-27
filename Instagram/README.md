@@ -52,7 +52,6 @@ copy: http://127.0.0.1:8000/ past to the browser
 
 Like and Follow functionality do not work
 
-
 ## Technologies used
 
 - Python 3.6
@@ -61,6 +60,7 @@ Like and Follow functionality do not work
 - JavaScript
 - Heroku for the deployment
 - Postgresql for the database
+
 
 ## Support and contact details
 
