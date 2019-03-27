@@ -1,6 +1,8 @@
- ## Instagram
+
 Instagram is the garelly website where user have to create account and can upload image,receive others image like or dislike, have the number of followers and following and can also make a comments.
 ## By MUKASINE Marie Claire
+## Description
+This is a simple web clone of the instagram website. Aas seen on intro, a user can signup to have right to access the app.then after create account he/she have to login where he have right to upload image,views number of following and followers. like or dislike image, put their comments and views others image
 
 ## Specifications
 user have to signup after signup,it automatically receive a login button where he have to put the name and password and then the user have an account where he/she can uploads image, views different image posted by other he/she can like or dislike follow or make a comments
