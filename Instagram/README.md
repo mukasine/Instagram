@@ -7,14 +7,6 @@ This is a simple web clone of the instagram website. Aas seen on intro, a user c
 ## Specifications
 user have to signup after signup,it automatically receive a login button where he have to put the name and password and then the user have an account where he/she can uploads image, views different image posted by other he/she can like or dislike follow or make a comments
 
-## Set Up and Installations
-Prerequisites
-* Ubuntu Software
-* Python3.6
-* Postgres
-* python virtualenv
-* Clone the Repo
-Run the following command on the terminal: git clone https://github.com/mukasine/instagram.git && cd instagram
 
 ## Activate virtual environment
 Activate virtual environment using python3.6 as default handler
