@@ -61,11 +61,11 @@ Like and Follow functionality do not work
 - Heroku for the deployment
 - Postgresql for the database
 
-
 ## Support and contact details
 
-* for any support please contact me on mclaremukasine@gmail.com or
-* phone:0782586013 
+* for any support please contact on mclaremukasine@gmail.com or
+* phone:0782586013 su
+
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
