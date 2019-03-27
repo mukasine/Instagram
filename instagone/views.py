@@ -63,6 +63,12 @@ def search_results(request):
         return render(request, 'all-instagone/search.html',{"message":message})
 
 @login_required(login_url='/accounts/login/')
+def image(request,image_id):
+    try:
+        image = Image.objects.get(id = image_id)
+    except DoesNotExist:
+        raise Http404()
+    return render(request,"all-instagone/image.html", {"image":image})
 
 @login_required(login_url='/accounts/login/')
 def new_image(request):
