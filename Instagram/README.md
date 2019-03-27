@@ -22,13 +22,8 @@ Activate virtual environment using python3.6 as default handler
 * virtualenv -p /usr/bin/python3.6 venv && source venv/bin/activate
 * Install dependancies
 * Install dependancies that will create an environment for the app to run pip3 install -r requirements.txt
-
-## Create the Database
-* psql
-* CREATE DATABASE insto;
-## .env file
+## env file
 Create .env file and paste the following:
-
 SECRET_KEY = '<Secret_key>'
 DBNAME = 'insto'
 USER = '<Username>'
