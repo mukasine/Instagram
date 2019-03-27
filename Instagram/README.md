@@ -48,10 +48,10 @@ python3.6 manage.py migrate
 python3.6 manage.py runserver
 copy: http://127.0.0.1:8000/ past to the browser
 
-
 ## Known bugs
 
 Like and Follow functionality do not work
+
 
 ## Technologies used
 
