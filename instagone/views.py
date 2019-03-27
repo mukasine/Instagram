@@ -30,7 +30,7 @@ def instagone_today(request):
     else:
         form = instagoneLetterForm()
         form = NewImageForm()
-    return render(request, 'all-instagone/today-instagone.html', {"date": date,"letterForm":form, "ImageForm":form, "images":all_images},{'images':images})
+    return render(request, 'all-instagone/today-instagone.html', {"date": date,"letterForm":form, "ImageForm":form,'images':images})
 
 
 def past_days_instagone(request, past_date):
@@ -80,7 +80,7 @@ def new_image(request):
             image = form.save(commit=False)
             image.user = current_user
             image.save()
-        return redirect('instagoneToday')
+        return redirect('InstagoneToday')
 
     else:
         form = NewImageForm()

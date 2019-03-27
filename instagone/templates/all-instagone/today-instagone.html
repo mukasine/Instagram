@@ -1,0 +1,13 @@
+{%extends 'all-instagone/base.html'%} 
+{% load bootstrap3 %}
+<!-- Some content here-->
+
+<!-- Looping through news end   -->
+{%block content%}
+{%for img in images %}
+<p>{{img.name}}</p>
+<img src="{{img.image.url}}" alt="">
+{%empty%}
+<p>no news</p>
+{%endfor%}
+</div>{%endblock%}
