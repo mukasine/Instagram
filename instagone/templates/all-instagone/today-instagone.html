@@ -5,7 +5,7 @@
 <!-- Looping through news end   -->
 {%block content%}
 {%for img in images %}
-<p>{{img.name}}</p>
+
 <img src="{{img.image.url}}" alt="">
 {%empty%}
 <p>no news</p>
