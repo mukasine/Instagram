@@ -55,6 +55,6 @@ class Image(models.Model):
         photos = cls.objects.filter(name__icontains=search_term)
         return photos
 
-class InstagoneLetterRecipients(models.Model):
+class instagoneLetterRecipients(models.Model):
     name = models.CharField(max_length = 30)
     email = models.EmailField(null = True)   

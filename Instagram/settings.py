@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'instagone.apps.InstagoneConfig',
+    'instagone.apps.instagoneConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

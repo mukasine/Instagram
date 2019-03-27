@@ -1,8 +1,8 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse, Http404,HttpResponseRedirect
 import datetime as dt
-from .models import Image, InstagoneLetterRecipients
-from .forms import InstagoneLetterForm,NewImageForm,ProfileUploadForm
+from .models import Image, instagoneLetterRecipients
+from .forms import instagoneLetterForm,NewImageForm,ProfileUploadForm
 from .email import send_welcome_email
 from django.contrib.auth.decorators import login_required
 # Create your views here.
@@ -17,23 +17,23 @@ def instagone_today(request):
     print(images)
     # image = Image.today-photos()
     if request.method == 'POST':
-        form = InstagoneLetterForm(request.POST)
+        form = instagoneLetterForm(request.POST)
         if form.is_valid():
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
 
-            recipient = PhotosLetterRecipients(name = name,email =email)
+            recipient = instagonesLetterRecipients(name = name,email =email)
             recipient.save()
             send_welcome_email(name,email)
 
-            HttpResponseRedirect('photos_today')
+            HttpResponseRedirect('instagones_today')
     else:
-        form = InstagoneLetterForm()
+        form = instagoneLetterForm()
         form = NewImageForm()
-    return render(request, 'all-Instagone/today-Instagone.html', {"date": date,"letterForm":form, "ImageForm":form, "images":all_images},{'images':images})
+    return render(request, 'all-instagone/today-instagone.html', {"date": date,"letterForm":form, "ImageForm":form, "images":all_images},{'images':images})
 
 
-def past_days_Instagone(request, past_date):
+def past_days_instagone(request, past_date):
     
     try:
         # Converts data from the string Url
@@ -44,10 +44,10 @@ def past_days_Instagone(request, past_date):
         assert False
 
     if date == dt.date.today():
-        return redirect(photos_today)
+        return redirect(instagones_today)
 
-    Instagone_today = Image.past_days_Instagone(date)
-    return render(request, 'all-Instagone/past-Instagone.html',{"date": date,"Instagone":Instagone})
+    instagone_today = Image.past_days_instagone(date)
+    return render(request, 'all-instagone/past-instagone.html',{"date": date,"instagone":instagone})
 
 def search_results(request):
 
@@ -56,11 +56,11 @@ def search_results(request):
         searched_images = Image.search_by_name(search_term)
         message = f"{search_term}"
 
-        return render(request, 'all-Instagone/search.html',{"message":message,"images": searched_images})
+        return render(request, 'all-instagone/search.html',{"message":message,"images": searched_images})
 
     else:
         message = "You haven't searched for any term"
-        return render(request, 'all-Instagone/search.html',{"message":message})
+        return render(request, 'all-instagone/search.html',{"message":message})
 
 @login_required(login_url='/accounts/login/')
 def image(request,image_id):
@@ -68,7 +68,7 @@ def image(request,image_id):
         image = Image.objects.get(id = image_id)
     except DoesNotExist:
         raise Http404()
-    return render(request,"all-Instagone/image.html", {"image":image})
+    return render(request,"all-instagone/image.html", {"image":image})
 
 @login_required(login_url='/accounts/login/')
 def new_image(request):
@@ -80,7 +80,7 @@ def new_image(request):
             image = form.save(commit=False)
             image.user = current_user
             image.save()
-        return redirect('InstagoneToday')
+        return redirect('instagoneToday')
 
     else:
         form = NewImageForm()
