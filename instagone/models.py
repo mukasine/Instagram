@@ -53,7 +53,7 @@ class Image(models.Model):
     @classmethod
     def search_by_name(cls,search_term):
         photos = cls.objects.filter(name__icontains=search_term)
-        return photos
+        return instagone
 
 class instagoneLetterRecipients(models.Model):
     name = models.CharField(max_length = 30)
